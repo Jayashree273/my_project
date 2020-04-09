@@ -1,0 +1,10 @@
+readme.md: guessinggame.sh
+	echo "Title of the project is guessinggame.sh" >> readme.md
+	echo "Number of line in guessinggame.sh:" >> readme.md
+	wc -l guessinggame.sh | egrep -o "[0-9]+" >> readme.md
+	echo "Date and time at which make was run:" >> readme.md
+	date >> readme.md
+
+
+clean:
+	rm readme.md
